@@ -1,0 +1,12 @@
+.env
+.git
+**/.gitkeep
+.idea
+.vscode
+
+node_modules
+dist
+
+.eslintrc.cjs
+babel.config.cjs
+vue.config.cjs
