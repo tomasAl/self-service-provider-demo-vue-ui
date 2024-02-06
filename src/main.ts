@@ -26,20 +26,20 @@ const vuetify = createVuetify({
 import App from './App.vue';
 import router from './router';
 
+/*
+ * @MICROFRONTEND
+ *
+ * Aplikacija turi būti sukuriama naudojant `singleSpaVue` metodą.
+ *
+ * Pagrindinis aplikacijos komponentas pateikiamas kaip pirmas
+ * parametras `h` metodui. `use` naudojimo pavyzdžiai pateikiami
+ * `handleInstance` callback'e.
+ */
 const vueLifecycles = singleSpaVue({
   createApp,
   appOptions: {
     render() {
-      return h(App, {
-        // single-spa props are available on the "this" object. Forward them to your component as needed.
-        // https://single-spa.js.org/docs/building-applications#lifecycle-props
-        // if you uncomment these, remember to add matching prop definitions for them in your App.vue file.
-        /*
-        name: this.name,
-        mountParcel: this.mountParcel,
-        singleSpa: this.singleSpa,
-        */
-      });
+      return h(App, {});
     },
   },
   handleInstance(app) {
@@ -48,6 +48,11 @@ const vueLifecycles = singleSpaVue({
   },
 });
 
+/*
+ * @MICROFRONTEND
+ *
+ * single-spa pateikiami lifecycle hook'ai.
+ */
 export const bootstrap = vueLifecycles.bootstrap;
 export const mount = vueLifecycles.mount;
 export const unmount = vueLifecycles.unmount;

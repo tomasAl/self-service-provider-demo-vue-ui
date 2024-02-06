@@ -1,6 +1,14 @@
 <script setup lang="ts">
+  /*
+   * @MICROFRONTEND
+   *
+   * @rc-ses aplinkos teikiamo funkcionalumo import'ai apibrėžti
+   * src/@types. Vėliau vietoje tokio formato jie bus pateikiami
+   * kaip npm biblioteka.
+   */
   import { addToCart } from '@rc-ses/self-service-portal-ui';
   import { redirectToLanding } from '@rc-ses/self-service-portal-ui-root';
+
   import UserDetailsSection from './UserDetailsSection.vue';
 
   const serviceName = 'Vue paslauga #1';
@@ -12,6 +20,12 @@
 
     <span class="text-h6" style="margin-right: .5rem; vertical-align: sub;">{{ serviceName }}</span>
 
+    {{ /*
+      * @MICROFRONTEND
+      *
+      * `addToCart` metodo kvietimas, kurį eksportuoja
+      * single-spa modulis @rc-ses/self-service-portal-ui
+      */}}
     <v-btn
       type='button'
       color="primary"
@@ -20,6 +34,12 @@
     >Pridėti paslaugą į krepšelį</v-btn>
   </div>
 
+  {{ /*
+    * @MICROFRONTEND
+    *
+    * `redirectToLanding` metodo kvietimas, kurį eksportuoja
+    * single-spa modulis @rc-ses/self-service-portal-ui-root
+    */}}
   <div>
     <v-btn
       type='button'

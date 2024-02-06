@@ -1,6 +1,20 @@
 <script setup lang="ts">
+
+/*
+ * @MICROFRONTEND
+ *
+ * @rc-ses aplinkos teikiamo funkcionalumo interfeisų import'ai
+ * apibrėžti src/@types. Vėliau vietoje tokio formato jie bus pateikiami
+ * kaip npm biblioteka.
+ */
 import { User, getUser } from "@rc-ses/self-service-portal-ui";
 
+/*
+ * @MICROFRONTEND
+ *
+ * `getUser` metodo kvietimas, bei User tipas, kuriuos eksportuoja
+ * single-spa modulis @rc-ses/self-service-portal-ui
+ */
 const user: User | undefined = getUser();
 </script>
 
