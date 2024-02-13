@@ -19,13 +19,9 @@
     <user-details-section />
 
     <span class="text-h6" style="margin-right: .5rem; vertical-align: sub;">{{ serviceName }}</span>
-
-    {{ /*
-      * @MICROFRONTEND
-      *
-      * `addToCart` metodo kvietimas, kurį eksportuoja
-      * single-spa modulis @rc-ses/self-service-portal-ui
-      */}}
+      <!-- @MICROFRONTEND-->
+      <!-- `addToCart` metodo kvietimas, kurį eksportuoja -->
+      <!-- single-spa modulis @rc-ses/self-service-portal-ui -->
     <v-btn
       type='button'
       color="primary"
@@ -34,12 +30,10 @@
     >Pridėti paslaugą į krepšelį</v-btn>
   </div>
 
-  {{ /*
-    * @MICROFRONTEND
-    *
-    * `redirectToLanding` metodo kvietimas, kurį eksportuoja
-    * single-spa modulis @rc-ses/self-service-portal-ui-root
-    */}}
+    <!-- @MICROFRONTEND-->
+    <!-- `redirectToLanding` metodo kvietimas, kurį eksportuoja-->
+    <!-- single-spa modulis @rc-ses/self-service-portal-ui-root-->
+     
   <div>
     <v-btn
       type='button'
