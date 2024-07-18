@@ -1,3 +1,6 @@
+const path = require("path");
+const { VuetifyPlugin } = require('webpack-plugin-vuetify')
+
 /*
  * @MICROFRONTEND
  *
@@ -30,9 +33,29 @@ module.exports = {
       args[0].rootDirectoryLevel = 1;
       return args;
     });
+
+    config.plugin('VuetifyPlugin').use(
+      VuetifyPlugin,
+      // [{ styles: { configFile: './local_modules/rc-ses-vue-components/src/styles/settings.scss' } }]
+      [{ styles: { configFile: path.resolve(__dirname, 'local_modules/rc-ses-vue-components/src/styles/settings.scss') } }]
+    );
   },
+  filenameHashing: false,
   configureWebpack: {
     externals: [/^@rc-ses\/.+/],
+    resolve: {
+      alias: {
+        '@vue-components': path.resolve(__dirname, 'local_modules/rc-ses-vue-components/src'),
+      },
+    },
+    plugins: [
+      new VuetifyPlugin({ styles: { configFile: './local_modules/rc-ses-vue-components/src/styles/settings.scss' } }),
+    ],
+    module: {
+      rules: [
+        { parser: { system: false } }
+      ]
+    },
     output: {
       libraryTarget: 'system',
       filename: "rc-ses-self-service-provider-demo-vue-ui.js"

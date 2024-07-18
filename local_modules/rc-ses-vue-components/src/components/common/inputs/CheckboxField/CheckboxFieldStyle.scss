@@ -1,0 +1,80 @@
+@import '../../../../styles/shared/mixins/makeFocus';
+
+.rc-checkbox {
+  .v-label {
+    color: rgb(var(--v-theme-grey-900));
+    opacity: 1;
+    height: auto;
+    font-size: 0.9375rem; // 15px
+    padding-left: 0.5rem;
+  }
+
+  .v-selection-control--focus-visible .v-selection-control__input::before {
+    opacity: 0 !important;
+  }
+
+  &.v-checkbox .v-selection-control {
+    min-height: 2rem;
+  }
+
+  // FOCUS STATE
+  .v-selection-control--focused {
+    .v-icon {
+      @include make-focus-before(8px);
+    }
+  }
+
+  // HOVER STATE
+  &:hover {
+    .v-icon {
+      border-radius: 4px;
+      box-shadow: 0 0 0 3px rgba(var(--v-theme-primary), 0.2);
+
+      .rc-icon-checkbox-border {
+        stroke: rgb(var(--v-theme-primary));
+      }
+    }
+  }
+
+  // DISABLED STATE
+  &.v-input--disabled {
+    .v-icon {
+      color: white;
+    }
+  }
+
+  &.v-input--error {
+    .v-icon {
+      color: white;
+
+      .rc-icon-checkbox-border {
+        stroke: rgb(var(--v-theme-error));
+      }
+    }
+
+    &:hover {
+      .v-icon {
+        border-radius: 4px;
+        box-shadow: 0 0 0 3px rgba(var(--v-theme-error), 0.2);
+        pointer-events: none;
+      }
+    }
+
+    &.rc-checkbox--checked {
+      .v-icon {
+        color: rgb(var(--v-theme-error));
+      }
+    }
+
+    .v-input__details {
+      padding-left: 2.625rem;
+    }
+  }
+
+}
+
+
+.rc-checkbox-field {
+  width: 100%;
+  padding: 1rem 1.25rem;
+}

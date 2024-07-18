@@ -1,0 +1,16 @@
+.rc-searchable-area {
+  display: flex;
+  padding: 0.75rem 1rem; // 12px
+  background-color: rgb(var(--v-theme-grey-50));
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgb(var(--v-theme-grey-300));
+
+  .v-input__prepend .v-checkbox {
+    margin-left: 2px;
+    margin-right: 6px;
+  }
+}

@@ -6,7 +6,7 @@
  * `"esModuleInterop": true` bei `"moduleResolution": "node"`
  * reikšmės.
  */
- {
+{
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
@@ -28,9 +28,8 @@
       "src/@types"
     ],
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": ["src/*"],
+      "rc-ses-vue-components": ["local_modules/rc-ses-vue-components"],
     },
     "lib": [
       "esnext",
@@ -43,12 +42,12 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx",
     "src/@types/**/*",
-    "src/main.js"
+    "src/main.js",
+    "src/shims-vue.d.ts",
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "local_modules",
   ]
 }

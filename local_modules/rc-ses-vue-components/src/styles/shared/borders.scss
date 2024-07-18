@@ -1,0 +1,7 @@
+@mixin make-border($color, $size: 1px) {
+  .border-#{$color} {
+    border: $size solid rgb(var(--v-theme-#{$color}));
+  }
+}
+
+@include make-border('primary');

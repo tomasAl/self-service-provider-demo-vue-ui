@@ -1,5 +1,4 @@
 declare module '@rc-ses/self-service-portal-ui' {
-  import * as React from 'react'
 
   export type User = {
     name: string;

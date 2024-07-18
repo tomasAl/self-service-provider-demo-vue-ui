@@ -1,0 +1,36 @@
+@use '../settings';
+
+.storybook-field {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  .storybook-field-previews, .storybook-field-view {
+    position: relative;
+    border-top: 1px solid #aaa;
+    padding: 3rem 2rem;
+    margin: 0 -2rem;
+  }
+
+  .storybook-field-view {
+    border-color: transparent;
+    margin-bottom: 2rem;
+  }
+
+  .storybook-field-previews-title {
+    position: absolute;
+    background: #aaa;
+    color: white;
+    padding: 5px 12px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    font-size: 0.875rem;
+    height: 32px;
+    top: -32px;
+    //display: none;
+
+    @media #{map-get(settings.$display-breakpoints, 'md-and-up')} {
+      left: 100px;
+    }
+  }
+}

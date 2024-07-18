@@ -1,0 +1,65 @@
+@use '../../../styles/variables' as var;
+
+.rc-alert {
+  border-radius: var.$container-border-radius;
+  .v-alert__prepend {
+    margin-inline-end: 0.625rem;
+  }
+
+  .v-alert-title {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  .v-alert__content {
+    font-size: 0.875rem;
+  }
+
+  &.v-alert--variant-flat {
+
+    &.rc-alert-dark {
+      --v-theme-info: var(--v-theme-grey-900);
+      --v-theme-warning: var(--v-theme-warning-300);
+      --v-theme-on-warning: var(--v-theme-warning-950);
+      --v-theme-error: var(--v-theme-error-600);
+      --v-theme-success: var(--v-theme-secondary-700);
+      --v-theme-on-success: 255, 255, 255;
+
+      .v-alert__content {
+        font-weight: 600;
+      }
+    }
+
+    &.rc-alert-light {
+      --v-theme-info: var(--v-theme-grey-100);
+      --v-theme-on-info: var(--v-theme-grey-900);
+      &.bg-info .v-icon {
+        color: rgb(var(--v-theme-grey-600));
+      }
+
+      --v-theme-warning: var(--v-theme-warning-100);
+      --v-theme-on-warning: var(--v-theme-warning-900);
+      &.bg-warning .v-icon {
+        color: rgb(var(--v-theme-warning-600));
+      }
+
+      --v-theme-error: var(--v-theme-error-50);
+      --v-theme-on-error: var(--v-theme-error-900);
+      &.bg-error .v-icon {
+        color: rgb(var(--v-theme-error-600));
+      }
+
+      --v-theme-success: var(--v-theme-secondary-100);
+      --v-theme-on-success: var(--v-theme-secondary-900);
+      &.bg-success .v-icon {
+        color: rgb(var(--v-theme-secondary-600));
+      }
+
+      .v-alert__content {
+        font-weight: 400;
+      }
+    }
+  }
+
+}

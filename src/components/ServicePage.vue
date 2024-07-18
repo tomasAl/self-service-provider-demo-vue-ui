@@ -1,45 +1,66 @@
 <script setup lang="ts">
-  /*
-   * @MICROFRONTEND
-   *
-   * @rc-ses aplinkos teikiamo funkcionalumo import'ai apibrėžti
-   * src/@types. Vėliau vietoje tokio formato jie bus pateikiami
-   * kaip npm biblioteka.
-   */
-  import { addToCart } from '@rc-ses/self-service-portal-ui';
-  import { redirectToLanding } from '@rc-ses/self-service-portal-ui-root';
+  import { HeaderPanel, StepFormLayout } from 'rc-ses-vue-components';
 
+  import FormActions from './FormActions.vue';
+  import FormActionsFooter from './FormActionsFooter.vue';
   import UserDetailsSection from './UserDetailsSection.vue';
+  import ServiceDeliveryForm from './ServiceDeliveryForm.vue';
+  import ServiceForm from './ServiceForm.vue';
 
-  const serviceName = 'Vue paslauga #1';
+  const steps = [
+    {
+      id: 'step1',
+      title: 'Vartotojo duomenys',
+      completed: true,
+      active: false,
+      expanded: false,
+      component: UserDetailsSection,
+    },
+    {
+      id: 'step2',
+      title: 'Paslaugos užsakymo forma',
+      completed: false,
+      active: true,
+      expanded: true,
+      component: ServiceForm,
+    },
+    {
+      id: 'step3',
+      title: 'Paslaugos išdavimas',
+      completed: false,
+      active: false,
+      expanded: false,
+      component: ServiceDeliveryForm,
+    },
+  ];
 </script>
 
 <template>
-  <div>
-    <user-details-section />
+  <HeaderPanel
+    :breadcrumbs="[
+      {
+        title: 'Pradžia',
+        href: '/',
+      },
+      {
+        title: 'Paslaugos užsakymo forma',
+      },
+    ]"
+    title="Nekilnojamojo turto registro išrašas pagal nurodytą turto adresą"
+    description="Šiame puslapyje Jūs galite užsisakyti Nekilnojamojo turto registro išrašus,
+        pažymas bei kitus dokumentus. Užsakytą NTR išrašą, pažymą ar kitą dokumentą
+        galėsite gauti elektroniniu būdu arba atsiimti pasirinktame VĮ Registrų centro
+        padalinyje."
+    >
+  </HeaderPanel>
 
-    <span class="text-h6" style="margin-right: .5rem; vertical-align: sub;">{{ serviceName }}</span>
-      <!-- @MICROFRONTEND-->
-      <!-- `addToCart` metodo kvietimas, kurį eksportuoja -->
-      <!-- single-spa modulis @rc-ses/self-service-portal-ui -->
-    <v-btn
-      type='button'
-      color="primary"
-      elevation="0"
-      v-on:click="() => addToCart(serviceName)"
-    >Pridėti paslaugą į krepšelį</v-btn>
-  </div>
+  <StepFormLayout :items="steps">
+    <template #actions>
+      <FormActions />
+    </template>
 
-    <!-- @MICROFRONTEND-->
-    <!-- `redirectToLanding` metodo kvietimas, kurį eksportuoja-->
-    <!-- single-spa modulis @rc-ses/self-service-portal-ui-root-->
-     
-  <div>
-    <v-btn
-      type='button'
-      color="primary"
-      variant='text'
-      @click="() => redirectToLanding()"
-    >Grįžti į titulinį</v-btn>
-  </div>
+    <template #actions-after>
+      <FormActionsFooter />
+    </template>
+  </StepFormLayout>
 </template>

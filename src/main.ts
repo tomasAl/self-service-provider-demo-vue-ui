@@ -1,27 +1,11 @@
 import { h, createApp } from 'vue';
 import singleSpaVue from 'single-spa-vue';
 
-import 'vuetify/styles'
-import { createVuetify} from 'vuetify';
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
+import { rcCreateVuetify } from 'rc-ses-vue-components';
 
-const vuetify = createVuetify({
-  components,
-  directives,
-  theme: {
-    themes: {
-      light: {
-        dark: false,
-        colors: {
-          surface: '#333333',
-          primary: '#3199b4',
-          secondary: '#45ba8a',
-        }
-      }
-    }
-  }
-});
+import 'vuetify/styles';
+
+const vuetify = rcCreateVuetify();
 
 import App from './App.vue';
 import router from './router';

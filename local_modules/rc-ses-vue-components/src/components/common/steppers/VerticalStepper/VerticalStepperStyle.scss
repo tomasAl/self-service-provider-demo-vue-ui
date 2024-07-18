@@ -1,0 +1,44 @@
+.rc-vertical-stepper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .step {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+    &-icon, &-icon .v-icon {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+
+    &-title {
+      margin-left: 0.625rem;
+    }
+
+    &.active {
+
+      .step-title {
+        font-weight: 600;
+        line-height: 1.1rem;
+      }
+    }
+
+
+    &:not(:last-child) {
+      margin-bottom: 0.625rem;
+    }
+  }
+
+
+  .line {
+    position: absolute;
+    background-color: rgb(var(--v-theme-grey-100));
+    width: 0.125rem;
+    height: calc(100% - 1.5rem);
+    left: calc(0.75rem - 1px);
+    top: 0.75rem;
+    z-index: 0;
+  }
+}
