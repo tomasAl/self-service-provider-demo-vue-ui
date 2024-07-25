@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { ref } from 'vue'
-  import { CheckboxField, NumberStepperField, SelectField } from 'rc-ses-vue-components';
+  import { CheckboxField, NumberStepperField, SelectField } from '@rc-ses/vue-components';
 
   const modelTikslas = ref()
   const modelSutikimas = ref()

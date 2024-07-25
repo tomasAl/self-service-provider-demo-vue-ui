@@ -9,8 +9,8 @@
   import { addToCart } from '@rc-ses/self-service-portal-ui';
   import { redirectToLanding } from '@rc-ses/self-service-portal-ui-root';
 
-  // import ArrowRightIcon from '@/assets/icons/regular/ArrowRightIcon.vue'
-  import { Button } from 'rc-ses-vue-components';
+  import { Button } from '@rc-ses/vue-components';
+  import { ArrowRightIcon } from '@rc-ses/vue-components/icons'
 </script>
 
 <template>
@@ -26,7 +26,7 @@
   <Button size="large" class="text-body-2 font-weight-strong" v-on:click="() => addToCart('Vue paslauga #1')">
     Pridėti į krepšelį
     <template #append>
-      <!-- <ArrowRightIcon color="grey-900" /> -->
+      <ArrowRightIcon color="grey-900" />
     </template>
   </Button>
 </template>

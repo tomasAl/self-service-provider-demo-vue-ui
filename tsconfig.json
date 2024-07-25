@@ -10,9 +10,9 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
+    "moduleResolution": "Bundler",
     "strict": true,
     "jsx": "preserve",
-    "moduleResolution": "node",
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "esModuleInterop": false,
@@ -22,14 +22,11 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env"
-    ],
-    "typeRoots": [
-      "src/@types"
+      "vite/client",
     ],
     "paths": {
       "@/*": ["src/*"],
-      "rc-ses-vue-components": ["local_modules/rc-ses-vue-components"],
+      "@plugins/*": ["src/plugins/*"]
     },
     "lib": [
       "esnext",
@@ -43,8 +40,7 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/@types/**/*",
-    "src/main.js",
-    "src/shims-vue.d.ts",
+    "src/main.js"
   ],
   "exclude": [
     "node_modules",

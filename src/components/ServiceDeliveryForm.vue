@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { ref } from 'vue'
-  import { Alert, RadioButtonsField, SelectField } from 'rc-ses-vue-components';
+  import { Alert, RadioButtonsField, SelectField } from '@rc-ses/vue-components';
 
   const modelRCPadalinys = ref()
 </script>

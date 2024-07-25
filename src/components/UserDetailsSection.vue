@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 /*
  * @MICROFRONTEND
  *
@@ -7,7 +6,8 @@
  * apibrėžti src/@types. Vėliau vietoje tokio formato jie bus pateikiami
  * kaip npm biblioteka.
  */
-import { User, getUser } from "@rc-ses/self-service-portal-ui";
+import type { User } from "@rc-ses/self-service-portal-ui";
+import { getUser } from "@rc-ses/self-service-portal-ui";
 
 /*
  * @MICROFRONTEND

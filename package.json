@@ -3,14 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "vue-cli-service build",
     "start": "vue-cli-service serve --port 9103",
-    "start:standalone": "vue-cli-service serve --mode standalone --port 9103"
+    "start:standalone": "vue-cli-service serve --mode standalone --port 9103",
+    "build": "vue-cli-service build",
+
+    "rc-ses-components:purge": "rimraf -r ./node_modules/.vite && rimraf -r ./node_modules/@rc-ses",
+    "rc-ses-components:install": "npm run rc-ses-components:purge && npm i --install-links"
   },
   "dependencies": {
+    "@rc-ses/vue-components": "file:../rc-ses-vue-components",
     "core-js": "^3.35.0",
     "pinia": "^2.1.7",
-    "rc-ses-vue-components": "file:./local_modules/rc-ses-vue-components",
     "single-spa-vue": "^3.0.0",
     "vue": "^3.4.21",
     "vue-class-component": "^8.0.0-0",
@@ -38,11 +41,12 @@
     "jsdom": "^23.0.1",
     "npm-run-all2": "^6.1.1",
     "prettier": "^3.0.3",
-    "sass": "^1.77.8",
+    "sass": "1.77.6",
     "sass-loader": "^14.2.1",
     "typescript": "~5.3.0",
+    "vite-plugin-vue-component-preview": "^1.1.7",
     "vue-cli-plugin-single-spa": "~3.3.0",
-    "vue-tsc": "^2.0.6",
+    "vue-tsc": "^2.0.28",
     "webpack-env": "^0.8.0",
     "webpack-plugin-vuetify": "^3.0.3"
   },

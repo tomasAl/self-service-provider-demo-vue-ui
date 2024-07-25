@@ -8,7 +8,7 @@
    */
   import { redirectToLanding } from '@rc-ses/self-service-portal-ui-root';
 
-  import { Button } from 'rc-ses-vue-components';
+  import { Button } from '@rc-ses/vue-components';
 </script>
 
 <!-- @MICROFRONTEND-->

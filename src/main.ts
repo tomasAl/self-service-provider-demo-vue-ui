@@ -1,14 +1,8 @@
 import { h, createApp } from 'vue';
 import singleSpaVue from 'single-spa-vue';
+import { registerPlugins } from '@/plugins';
 
-import { rcCreateVuetify } from 'rc-ses-vue-components';
-
-import 'vuetify/styles';
-
-const vuetify = rcCreateVuetify();
-
-import App from './App.vue';
-import router from './router';
+import App from '@/App.vue';
 
 /*
  * @MICROFRONTEND
@@ -27,8 +21,7 @@ const vueLifecycles = singleSpaVue({
     },
   },
   handleInstance(app) {
-    app.use(router);
-    app.use(vuetify);
+    registerPlugins(app)
   },
 });
 
