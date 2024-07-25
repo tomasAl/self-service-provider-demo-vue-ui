@@ -1,6 +1,4 @@
-const path = require("path");
 const { VuetifyPlugin } = require('webpack-plugin-vuetify')
-// const vuetifySettings = require('@rc-ses/vue-components/vuetify/settings.scss')
 
 /*
  * @MICROFRONTEND
