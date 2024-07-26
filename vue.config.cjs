@@ -35,7 +35,9 @@ module.exports = {
   },
   filenameHashing: false,
   configureWebpack: {
-    externals: [/^@rc-ses\/self-service-portal-.+/],
+    externals: [
+      /^@rc-ses\/self-service-portal-.+/
+    ],
     plugins: [
       new VuetifyPlugin({
         styles: {
@@ -45,7 +47,7 @@ module.exports = {
     ],
     module: {
       rules: [
-        { parser: { system: false } }
+        // { parser: { system: false } }
       ]
     },
     output: {

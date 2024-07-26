@@ -32,18 +32,29 @@
     :multiple="false"
     :items="[
       {
-        title: 'Padalinys 1',
-        value: 'p1',
-        subtitle:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        title: 'Lvivo g. 25-101',
+        value: 'vilnius',
+        subtitle: '09320 Vilnius',
       },
-      { title: 'Padalinys 2', value: 'p2' },
-      { title: 'Padalinys 3', value: 'p3' },
       {
-        title: 'Padalinys 4',
-        value: 'p4',
-        subtitle:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        title: 'E. Ožeškienės g. 12',
+        value: 'kaunas',
+        subtitle: '44252 Kaunas, (įėjimas iš L. Sapiegos gatvės pusės)',
+      },
+      {
+        title: 'Baltijos pr. 123-1',
+        value: 'klaipeda',
+        subtitle: '93224 Klaipėda',
+      },
+      {
+        title: 'Baltijos pr. 123-1',
+        value: 'siauliai',
+        subtitle: '78167 Šiauliai',
+      },
+      {
+        title: 'Baltijos pr. 123-1',
+        value: 'panevezys',
+        subtitle: '35173 Panevėžys',
       },
     ]"
   />

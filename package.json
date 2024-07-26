@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "vue-cli-service serve --port 9103",
-    "start:standalone": "vue-cli-service serve --mode standalone --port 9103",
+    "dev": "vue-cli-service serve --port 9103",
+    "dev:standalone": "vue-cli-service serve --mode standalone --port 9103",
     "build": "vue-cli-service build",
 
     "rc-ses-components:purge": "rimraf -r ./node_modules/.vite && rimraf -r ./node_modules/@rc-ses",

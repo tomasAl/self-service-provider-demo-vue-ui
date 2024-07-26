@@ -2,14 +2,13 @@
  * @MICROFRONTEND
  *
  * Minimali būtina TypeScript konfigūracija.
- * Privalomos ir labai svarbios yra nurodytos
- * `"esModuleInterop": true` bei `"moduleResolution": "node"`
- * reikšmės.
+ * Privaloma ir svarbi yra nurodyta
+ * `"esModuleInterop": true` reikšmė.
  */
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "ESNext",
+    "module": "ESNext",
     "moduleResolution": "Bundler",
     "strict": true,
     "jsx": "preserve",
@@ -44,6 +43,5 @@
   ],
   "exclude": [
     "node_modules",
-    "local_modules",
   ]
 }

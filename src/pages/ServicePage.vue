@@ -18,7 +18,7 @@
     },
     {
       id: 'step2',
-      title: 'Paslaugos užsakymo forma',
+      title: 'Paslaugos užsakymas',
       completed: false,
       active: true,
       expanded: true,
@@ -26,7 +26,7 @@
     },
     {
       id: 'step3',
-      title: 'Paslaugos išdavimas',
+      title: 'Išdavimas',
       completed: false,
       active: false,
       expanded: false,
@@ -43,7 +43,7 @@
         href: '/',
       },
       {
-        title: 'Paslaugos užsakymo forma',
+        title: 'Paslaugos užsakymas',
       },
     ]"
     title="Nekilnojamojo turto registro išrašas pagal nurodytą turto adresą"
