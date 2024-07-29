@@ -1,3 +1,4 @@
+const { VueLoaderPlugin } = require('vue-loader')
 const { VuetifyPlugin } = require('webpack-plugin-vuetify')
 
 /*
@@ -39,7 +40,9 @@ module.exports = {
       /^@rc-ses\/self-service-portal-.+/
     ],
     plugins: [
+      new VueLoaderPlugin(),
       new VuetifyPlugin({
+        autoImport: true,
         styles: {
           configFile: 'src/styles/vuetify/settings.scss',
         }

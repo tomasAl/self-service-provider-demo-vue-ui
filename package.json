@@ -6,7 +6,6 @@
     "dev": "vue-cli-service serve --port 9103",
     "dev:standalone": "vue-cli-service serve --mode standalone --port 9103",
     "build": "vue-cli-service build",
-
     "rc-ses-components:purge": "rimraf -r ./node_modules/.vite && rimraf -r ./node_modules/@rc-ses",
     "rc-ses-components:install": "npm run rc-ses-components:purge && npm i --install-links"
   },
@@ -46,6 +45,7 @@
     "typescript": "~5.3.0",
     "vite-plugin-vue-component-preview": "^1.1.7",
     "vue-cli-plugin-single-spa": "~3.3.0",
+    "vue-loader": "^17.4.2",
     "vue-tsc": "^2.0.28",
     "webpack-env": "^0.8.0",
     "webpack-plugin-vuetify": "^3.0.3"
