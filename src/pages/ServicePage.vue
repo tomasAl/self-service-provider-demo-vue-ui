@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { HeaderPanel, StepFormLayout } from '@rc-ses/vue-components';
+  import { RcSesHeader, RcSesFormStepper } from '@registrucentras/rc-ses-vue-components';
 
   import FormActions from '../components/FormActions.vue';
   import FormActionsFooter from '../components/FormActionsFooter.vue';
@@ -36,7 +36,7 @@
 </script>
 
 <template>
-  <HeaderPanel
+  <RcSesHeader
     :breadcrumbs="[
       {
         title: 'Pradžia',
@@ -52,9 +52,9 @@
         galėsite gauti elektroniniu būdu arba atsiimti pasirinktame VĮ Registrų centro
         padalinyje."
     >
-  </HeaderPanel>
+  </RcSesHeader>
 
-  <StepFormLayout :items="steps">
+  <RcSesFormStepper :items="steps">
     <template #actions>
       <FormActions />
     </template>
@@ -62,5 +62,5 @@
     <template #actions-after>
       <FormActionsFooter />
     </template>
-  </StepFormLayout>
+  </RcSesFormStepper>
 </template>

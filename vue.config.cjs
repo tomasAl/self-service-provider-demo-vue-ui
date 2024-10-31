@@ -15,8 +15,8 @@ const { VuetifyPlugin } = require('webpack-plugin-vuetify')
  *
  * `externals` yra nurodomas projekto priklausomybių prefix'as,
  * kurios neturi būti įtraukiamos į sukompiliuotą kodą.
- * Visos priklausomybės su `@rc-ses` prefix'u, kurios yra
- * `src/@types` kataloge apibrėžia atitinkamų single-spa modulių
+ * Visos priklausomybės su `@rc-ses` ir `@registrucentras` prefix'ais,
+ * kurios yra `src/@types` kataloge apibrėžia atitinkamų single-spa modulių
  * viešą eksportuojamą funkcionalumą, kurį galima "kviesti" bet
  * kur šioje aplikacijoje norint gauti arba pateikti informaciją
  * atitinkamiems moduliams.
@@ -48,11 +48,6 @@ module.exports = {
         }
       }),
     ],
-    module: {
-      rules: [
-        // { parser: { system: false } }
-      ]
-    },
     output: {
       libraryTarget: 'system',
       filename: "rc-ses-self-service-provider-demo-vue-ui.js"

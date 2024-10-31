@@ -1,6 +1,6 @@
 # Self-service portal Vue UI microfrontend demo application
 
-## Install @rc-ses/vue-components library
+## Install @registrucentras/rc-ses-vue-components library
 1. Make sure you have cloned `rc-ses-vue-components` repository under same parent folder (as described in *self-service-portal-ui-root* repo's README.md);
 2. `cd` to `rc-ses-vue-components` and build Vue components library by running:
     ```

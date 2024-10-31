@@ -1,13 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import ServicePage from '../pages/ServicePage.vue'
+import SingleStepForm from '@/pages/SingleStepForm/SingleStepForm.vue'
+import MultiStepForm from '@/pages/MultiStepForm/MultiStepForm.vue'
 
 const router = createRouter({
-  history: createWebHistory('/'),
+  history: createWebHistory('/paslaugos/uzsakymas'),
   routes: [
     {
-      path: '/demo-paslaugos/vue',
-      name: 'service',
-      component: ServicePage
+      path: '/00000000-0000-0000-0001-000000000000',
+      name: 'singleStepFormService',
+      component: SingleStepForm
+    },
+    {
+      path: '/00000000-0000-0000-0001-000000000001',
+      name: 'multiStepFormService',
+      component: MultiStepForm
     }
   ]
 })

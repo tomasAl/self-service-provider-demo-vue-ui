@@ -1,18 +1,18 @@
 <script setup lang="ts">
   import { ref } from 'vue'
-  import { Alert, RadioButtonsField, SelectField } from '@rc-ses/vue-components';
+  import { RcSesAlert, RcSesRadioButtonsField, RcSesSelectField } from '@registrucentras/rc-ses-vue-components';
 
   const modelRCPadalinys = ref()
 </script>
 
 <template>
-  <Alert variant="light" type="warning" class="form-control">
+  <RcSesAlert variant="light" type="warning" class="form-control">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </Alert>
+  </RcSesAlert>
 
-  <RadioButtonsField
+  <RcSesRadioButtonsField
     field-label="Išdavimo būdas"
     class="form-control"
     :options="[
@@ -21,9 +21,9 @@
       { label: 'Paštu Lietuvoje', value: 'option3' },
       { label: 'Paštu užsienyje', value: 'option4' },
     ]"
-  ></RadioButtonsField>
+  ></RcSesRadioButtonsField>
 
-  <SelectField
+  <RcSesSelectField
     v-model="modelRCPadalinys"
     class="form-control"
     field-label="RC padalinys"

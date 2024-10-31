@@ -8,7 +8,7 @@
    */
   import { redirectToLanding } from '@rc-ses/self-service-portal-ui-root';
 
-  import { Button } from '@rc-ses/vue-components';
+  import { RcSesButton } from '@registrucentras/rc-ses-vue-components';
 </script>
 
 <!-- @MICROFRONTEND-->
@@ -16,8 +16,8 @@
 <!-- single-spa modulis @rc-ses/self-service-portal-ui-root-->
 <template>
   <div class="d-flex pt-4 justify-center">
-    <Button variant="text" color="grey-600" class="text-decoration-underline" @click="() => redirectToLanding()"
-      >Atšaukti pildymą ir ištrinti formos duomenis</Button
+    <RcSesButton variant="text" color="grey-600" class="text-decoration-underline" @click="() => redirectToLanding()"
+      >Atšaukti pildymą ir ištrinti formos duomenis</RcSesButton
     >
   </div>
 </template>

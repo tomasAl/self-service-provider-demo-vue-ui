@@ -2,7 +2,10 @@ import { h, createApp } from 'vue';
 import singleSpaVue from 'single-spa-vue';
 import { registerPlugins } from '@/plugins';
 
+import {} from '@registrucentras/rc-ses-vue-components'
+
 import App from '@/App.vue';
+
 
 /*
  * @MICROFRONTEND
