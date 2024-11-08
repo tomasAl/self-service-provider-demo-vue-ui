@@ -7,6 +7,7 @@
 node_modules
 dist
 
+lib/single-spa-vue.cjs
 .eslintrc.cjs
 babel.config.cjs
 vue.config.cjs
