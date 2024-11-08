@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import UzsakymasForm from './UzsakymasForm.vue'
 import { RcSesFormContainer, useAccordionController } from '@registrucentras/rc-ses-vue-components'
+import UzsakymasForm from './UzsakymasForm.vue'
 
 const accordionController = useAccordionController({
   singleForm: {
     expanded: true,
     state: 'completed',
-    title: 'Bazinė informacija',
-  },
+    title: 'Bazinė informacija'
+  }
 })
 </script>
 

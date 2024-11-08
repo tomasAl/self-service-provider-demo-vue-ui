@@ -1,27 +1,27 @@
 <script setup lang="ts">
-  import { reactive, ref } from 'vue'
+import { reactive, ref } from 'vue'
 
-  const model = reactive({
-    purpose: ref(),
-    legalbasis: ref(),
-    agreement: ref(),
-    address: ref(),
-    term: ref(),
+const model = reactive({
+  purpose: ref(),
+  legalbasis: ref(),
+  agreement: ref(),
+  address: ref(),
+  term: ref(),
 
-    shortText: ref(),
-    longText: ref(),
+  shortText: ref(),
+  longText: ref(),
 
-    phoneNo: ref(),
-    searchable: ref(),
-    someDate: ref(),
-    someDateRange: ref(),
-  })
+  phoneNo: ref(),
+  searchable: ref(),
+  someDate: ref(),
+  someDateRange: ref()
+})
 </script>
 
 <template>
   <SelectField
-    class="form-control"
     v-model="model.purpose"
+    class="form-control"
     field-label="Tikslas"
     placeholder="Pasirinkite"
     :searchable="true"
@@ -30,25 +30,23 @@
       {
         title: 'Tikslas 1',
         value: 't1',
-        subtitle:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       },
       { title: 'Tikslas 2', value: 't2' },
       { title: 'Tikslas 3', value: 't3' },
       {
         title: 'Tikslas 4',
         value: 't4',
-        subtitle:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       },
       { title: 'Tikslas 5', value: 't5' },
-      { title: 'Tikslas 6', value: 't6' },
+      { title: 'Tikslas 6', value: 't6' }
     ]"
   />
 
   <SelectField
-    class="form-control"
     v-model="model.legalbasis"
+    class="form-control"
     field-label="Teisinis pagrindas"
     placeholder="Pasirinkite"
     :searchable="true"
@@ -57,32 +55,30 @@
       {
         title: 'Pagrindas 1',
         value: 'p1',
-        subtitle:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       },
       { title: 'Pagrindas 2', value: 'p2' },
       { title: 'Pagrindas 3', value: 'p3' },
       {
         title: 'Pagrindas 4',
         value: 'p4',
-        subtitle:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       },
       { title: 'Pagrindas 5', value: 'p5' },
-      { title: 'Pagrindas 6', value: 'p6' },
+      { title: 'Pagrindas 6', value: 'p6' }
     ]"
   />
 
   <CheckboxField
-    class="form-control"
     v-model="model.agreement"
+    class="form-control"
     label="Pagal užsakymą gautus duomenis naudosiu nurodytam duomenų tikslui ir šių duomenų neatskleisiu tretiesiems asmenims."
     field-label="Sutikimas"
   />
 
   <SelectField
-    class="form-control"
     v-model="model.term"
+    class="form-control"
     placeholder="Pasirinkite"
     field-label="Terminas"
     field-description="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
@@ -92,23 +88,21 @@
       {
         title: 'Terminas 1',
         value: 't1',
-        subtitle:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       },
       { title: 'Terminas 2', value: 't2' },
       { title: 'Terminas 3', value: 't3' },
       {
         title: 'Terminas 4',
         value: 't4',
-        subtitle:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      },
+        subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      }
     ]"
   />
 
   <SelectField
-    class="form-control"
     v-model="model.address"
+    class="form-control"
     field-label="Turto adresas"
     placeholder="Pasirinkite"
     :searchable="true"
@@ -117,48 +111,48 @@
       {
         title: 'Lvivo g. 7',
         value: 'lvivo-g-7',
-        subtitle: 'Vilnius, Vilniaus m. sav. 09313',
+        subtitle: 'Vilnius, Vilniaus m. sav. 09313'
       },
       {
         title: 'Lvivo g. 9',
         value: 'lvivo-g-9',
-        subtitle: 'Vilnius, Vilniaus m. sav. 09313',
+        subtitle: 'Vilnius, Vilniaus m. sav. 09313'
       },
       {
         title: 'Lvivo g. 11',
         value: 'lvivo-g-11',
-        subtitle: 'Vilnius, Vilniaus m. sav. 09313',
+        subtitle: 'Vilnius, Vilniaus m. sav. 09313'
       },
       {
         title: 'Lvivo g. 11A',
         value: 'lvivo-g-11a',
-        subtitle: 'Vilnius, Vilniaus m. sav. 09313',
+        subtitle: 'Vilnius, Vilniaus m. sav. 09313'
       },
       {
         title: 'Lvivo g. 12',
         value: 'lvivo-g-12',
-        subtitle: 'Vilnius, Vilniaus m. sav. 09313',
+        subtitle: 'Vilnius, Vilniaus m. sav. 09313'
       },
       {
         title: 'Lvivo g. 13',
         value: 'lvivo-g-13',
-        subtitle: 'Vilnius, Vilniaus m. sav. 09313',
+        subtitle: 'Vilnius, Vilniaus m. sav. 09313'
       },
       {
         title: 'Lvivo g. 13A',
         value: 'lvivo-g-13a',
-        subtitle: 'Vilnius, Vilniaus m. sav. 09313',
+        subtitle: 'Vilnius, Vilniaus m. sav. 09313'
       },
       {
         title: 'Lvivo g. 13B',
         value: 'lvivo-g-13b',
-        subtitle: 'Vilnius, Vilniaus m. sav. 09313',
+        subtitle: 'Vilnius, Vilniaus m. sav. 09313'
       },
       {
         title: 'Lvivo g. 13C',
         value: 'lvivo-g-1c',
-        subtitle: 'Vilnius, Vilniaus m. sav. 09313',
-      },
+        subtitle: 'Vilnius, Vilniaus m. sav. 09313'
+      }
     ]"
   />
 
@@ -171,18 +165,18 @@
   <br />
 
   <TextField
+    v-model="model.shortText"
     class="form-control"
     name="shortText"
-    v-model="model.shortText"
     field-label="Trumpas tekstas"
     placeholder="Tekstas"
     counter="10"
   ></TextField>
 
   <TextField
+    v-model="model.longText"
     class="form-control"
     name="longText"
-    v-model="model.longText"
     field-tooltip="Field tooltip content"
     field-label="Ilgas tekstas"
     placeholder="Tekstas"
@@ -190,8 +184,8 @@
   ></TextField>
 
   <PhoneInputField
-    class="form-control"
     v-model="model.phoneNo"
+    class="form-control"
     field-label="Radio tipo pasirinkimas"
     field-description="(alternatyvus)"
     default-iso="lt"
@@ -208,8 +202,8 @@
   />
 
   <DatePickerField
-    class="form-control"
     v-model="model.someDateRange"
+    class="form-control"
     field-label="Laikotarpis"
     range
     :max-width="300"
@@ -224,14 +218,14 @@
     class="form-control"
     field-label="Radio tipo pasirinkimas"
     :v-radio-group-props="{
-      class: 'bg-grey-100',
+      class: 'bg-grey-100'
     }"
     :options="[
       { value: 'p1', label: 'Pasirinkimas #1' },
       { value: 'p2', label: 'Pasirinkimas #2' },
       { value: 'p3', label: 'Pasirinkimas #3' },
       { value: 'p4', label: 'Pasirinkimas #4' },
-      { value: 'p5', label: 'Labai ilgas pasirinkimas #5' },
+      { value: 'p5', label: 'Labai ilgas pasirinkimas #5' }
     ]"
   />
 
@@ -244,7 +238,7 @@
       { value: 'p2', label: 'Pasirinkimas #2' },
       { value: 'p3', label: 'Pasirinkimas #3' },
       { value: 'p4', label: 'Pasirinkimas #4' },
-      { value: 'p5', label: 'Labai ilgas pasirinkimas #5' },
+      { value: 'p5', label: 'Labai ilgas pasirinkimas #5' }
     ]"
   />
 </template>

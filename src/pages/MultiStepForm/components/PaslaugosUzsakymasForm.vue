@@ -10,8 +10,7 @@ const props = defineProps<PaslaugosUzsakymasFormProps>()
 const { errors, defineField } = props.formController
 
 const [modelTikslas, modelTikslasProps] = defineField('tikslas')
-const [modelTeisinisPagrindas, modelTeisinisPagrindasProps] =
-  defineField('teisinisPagrindas')
+const [modelTeisinisPagrindas, modelTeisinisPagrindasProps] = defineField('teisinisPagrindas')
 const [modelSutikimas, modelSutikimasProps] = defineField('sutikimas')
 const [modelTerminas, modelTerminasProps] = defineField('terminas')
 const [modelEgzemplioriuSkaicius, modelEgzemplioriuSkaiciusProps] =
@@ -33,17 +32,17 @@ const [modelEgzemplioriuSkaicius, modelEgzemplioriuSkaiciusProps] =
         title: 'Tikslas 1',
         value: 't1',
         subtitle:
-          'Daugiau informacijos rasite &lt;a href=&quot;https://www.registrucentras.lt&quot; target=&quot;_blank&quot;&gt;Registrucentras.lt&lt;/a&gt;',
+          'Daugiau informacijos rasite &lt;a href=&quot;https://www.registrucentras.lt&quot; target=&quot;_blank&quot;&gt;Registrucentras.lt&lt;/a&gt;'
       },
       { title: 'Tikslas 2', value: 't2' },
       { title: 'Tikslas 3', value: 't3' },
       {
         title: 'Tikslas 4',
         value: 't4',
-        subtitle: 'Lorem Ipsum is simply dummy text of the printing.',
+        subtitle: 'Lorem Ipsum is simply dummy text of the printing.'
       },
       { title: 'Tikslas 5', value: 't5' },
-      { title: 'Tikslas 6', value: 't6' },
+      { title: 'Tikslas 6', value: 't6' }
     ]"
   />
 
@@ -61,19 +60,17 @@ const [modelEgzemplioriuSkaicius, modelEgzemplioriuSkaiciusProps] =
       {
         title: 'Pagrindas 1',
         value: 'p1',
-        subtitle:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       },
       { title: 'Pagrindas 2', value: 'p2' },
       { title: 'Pagrindas 3', value: 'p3' },
       {
         title: 'Pagrindas 4',
         value: 'p4',
-        subtitle:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       },
       { title: 'Pagrindas 5', value: 'p5' },
-      { title: 'Pagrindas 6', value: 'p6' },
+      { title: 'Pagrindas 6', value: 'p6' }
     ]"
   />
 
@@ -100,17 +97,15 @@ const [modelEgzemplioriuSkaicius, modelEgzemplioriuSkaiciusProps] =
       {
         title: 'Terminas 1',
         value: 't1',
-        subtitle:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       },
       { title: 'Terminas 2', value: 't2' },
       { title: 'Temrinas 3', value: 't3' },
       {
         title: 'Temrinas 4',
         value: 't4',
-        subtitle:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      },
+        subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      }
     ]"
   />
 

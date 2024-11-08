@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import {inject} from "vue";
-import {RcSesButton, UseFormType} from '@registrucentras/rc-ses-vue-components'
+import { inject } from 'vue'
+import { RcSesButton, UseFormType } from '@registrucentras/rc-ses-vue-components'
 
 const formController = inject<UseFormType>('formController')
 
@@ -9,18 +9,15 @@ const submit = () => {
     formController.submitForm()
 
     if (formController.meta.value.valid) {
-      console.log('Form is valid', formController.values)
+      // eslint-disable-next-line no-console
+      console.debug('Form is valid', formController.values)
     }
   }
 }
 </script>
 
 <template>
-  <RcSesButton
-    variant="text"
-    color="primary-700"
-    prepend-icon="$prev"
-    class="font-weight-regular"
+  <RcSesButton variant="text" color="primary-700" prepend-icon="$prev" class="font-weight-regular"
     >Baigti pildyti vėliau</RcSesButton
   >
   <div class="flex-grow-1" />

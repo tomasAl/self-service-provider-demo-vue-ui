@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RcSesButton } from '@registrucentras/rc-ses-vue-components';
+import { RcSesButton } from '@registrucentras/rc-ses-vue-components'
 </script>
 
 <template>

@@ -47,7 +47,7 @@ export interface ModalInfoProps {
 withDefaults(defineProps<ModalInfoProps>(), {
   icon: undefined,
   closable: true,
-  iconColor: undefined,
+  iconColor: undefined
 })
 
 const dialog = defineModel<boolean>()
@@ -55,6 +55,6 @@ const dialog = defineModel<boolean>()
 
 <script lang="ts">
 export default {
-  name: 'ModalInfo',
+  name: 'ModalInfo'
 }
 </script>

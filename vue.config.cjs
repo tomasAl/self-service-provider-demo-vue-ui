@@ -30,30 +30,28 @@ const { VuetifyPlugin } = require('webpack-plugin-vuetify')
 module.exports = {
   chainWebpack(config) {
     config.plugin('SystemJSPublicPathWebpackPlugin').tap((args) => {
-      args[0].rootDirectoryLevel = 1;
-      return args;
-    });
+      args[0].rootDirectoryLevel = 1
+      return args
+    })
   },
   filenameHashing: false,
   configureWebpack: {
     externals: [
-      /^@rc-ses\/self-service-portal-.+/
+      /^@rc-ses\/self-service-portal-.+/,
     ],
     plugins: [
       new VueLoaderPlugin(),
       new VuetifyPlugin({
         autoImport: true,
-        styles: {
-          configFile: 'src/styles/vuetify/settings.scss',
-        }
-      }),
+        styles: 'none'
+      })
     ],
     output: {
       libraryTarget: 'system',
-      filename: "rc-ses-self-service-provider-demo-vue-ui.js"
-    },
+      filename: 'rc-ses-self-service-provider-demo-vue-ui.js'
+    }
   },
   devServer: {
-    host: "localhost"
+    host: 'localhost'
   }
 }

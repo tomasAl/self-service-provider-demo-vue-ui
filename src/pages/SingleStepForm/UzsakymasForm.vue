@@ -1,16 +1,29 @@
-
 <script setup lang="ts">
 import * as yup from 'yup'
 import { toTypedSchema } from '@vee-validate/yup'
 import { configure, Field, Form as VeeForm, useForm } from 'vee-validate'
+import {
+  RcSesCheckboxField,
+  RcSesDatePickerField,
+  RcSesFileDropzoneField,
+  RcSesNumberStepperField,
+  RcSesPhoneField,
+  RcSesRadioButtonsField,
+  RcSesRadioField,
+  RcSesSearchableField,
+  RcSesSelectField,
+  RcSesTextAreaField,
+  RcSesTextField,
+  RcSesTimePickerField
+} from '@registrucentras/rc-ses-vue-components'
 import SearchModal from '../shared/modals/SearchModal.vue'
 
 configure({
   validateOnBlur: true,
   validateOnChange: true,
   validateOnInput: false,
-  validateOnModelUpdate: false,
-});
+  validateOnModelUpdate: false
+})
 
 const FormSchema = yup.object({
   trumpas: yup.string().required(),
@@ -20,7 +33,7 @@ const FormSchema = yup.object({
     .object()
     .shape({
       country: yup.object().required(),
-      value: yup.string().required(),
+      value: yup.string().required()
     })
     .required(),
   ieskoti: yup.string().required(),
@@ -30,21 +43,22 @@ const FormSchema = yup.object({
   laikas: yup.string().required(),
   skaicius: yup.number().required().min(5),
   radioPasirinkimas: yup.string().required(),
-  radioButtonsPasirinkimas: yup.string().required(),
+  radioButtonsPasirinkimas: yup.string().required()
 })
 
 useForm({
   validationSchema: toTypedSchema(FormSchema),
-  validateOnMount: false,
+  validateOnMount: false
 })
 
 function onSubmit(values: any) {
-  console.log('Form submitted with values:', values)
+  // eslint-disable-next-line no-console
+  console.debug('Form submitted with values:', values)
 }
 </script>
 
 <template>
-  <VeeForm as="div" v-slot="{ handleSubmit }" :validation-schema="FormSchema">
+  <VeeForm v-slot="{ handleSubmit }" as="div" :validation-schema="FormSchema">
     <form novalidate @submit="handleSubmit($event, onSubmit)">
       <Field v-slot="fieldProps" name="trumpas">
         <RcSesTextField
@@ -91,19 +105,17 @@ function onSubmit(values: any) {
             {
               title: 'Tikslas 1',
               value: 't1',
-              subtitle:
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+              subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
             },
             { title: 'Tikslas 2', value: 't2' },
             { title: 'Tikslas 3', value: 't3' },
             {
               title: 'Tikslas 4',
               value: 't4',
-              subtitle:
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+              subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
             },
             { title: 'Tikslas 5', value: 't5' },
-            { title: 'Tikslas 6', value: 't6' },
+            { title: 'Tikslas 6', value: 't6' }
           ]"
         />
       </Field>
@@ -155,7 +167,7 @@ function onSubmit(values: any) {
       </Field>
 
       <Field v-slot="fieldProps" name="laikas">
-        <RcSesTimepickerField
+        <RcSesTimePickerField
           v-bind="fieldProps.field"
           :error="fieldProps.errorMessage"
           field-label="Laikas"
@@ -182,7 +194,7 @@ function onSubmit(values: any) {
           v-bind="fieldProps.field"
           :error="fieldProps.errorMessage"
           :field-wrapper-props="{
-            class: 'form-control',
+            class: 'form-control'
           }"
           label="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
           field-label="Sutikimas"
@@ -195,7 +207,7 @@ function onSubmit(values: any) {
           v-bind="fieldProps.field"
           :error="fieldProps.errorMessage"
           :field-wrapper-props="{
-            class: 'form-control',
+            class: 'form-control'
           }"
           label="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
           field-label="Sutikimas + tooltip"
@@ -203,10 +215,7 @@ function onSubmit(values: any) {
         >
           <template #label="labelProps">
             <span v-bind="labelProps">{{ labelProps.label }}</span>
-            <RcSesTooltip
-              title="Tooltip title"
-              description="Tooltip description"
-            ></RcSesTooltip>
+            <RcSesTooltip title="Tooltip title" description="Tooltip description"></RcSesTooltip>
           </template>
         </RcSesCheckboxField>
       </Field>
@@ -228,7 +237,7 @@ function onSubmit(values: any) {
           :error="fieldProps.errorMessage"
           field-label="Pasirinkimas"
           :field-wrapper-props="{
-            class: 'form-control',
+            class: 'form-control'
           }"
           class="bg-grey-100 pa-2"
           name="radioPasirinkimas"
@@ -237,7 +246,7 @@ function onSubmit(values: any) {
             { value: 'p2', label: 'Pasirinkimas #2' },
             { value: 'p3', label: 'Pasirinkimas #3' },
             { value: 'p4', label: 'Pasirinkimas #4' },
-            { value: 'p5', label: 'Labai ilgas pasirinkimas #5' },
+            { value: 'p5', label: 'Labai ilgas pasirinkimas #5' }
           ]"
         />
       </Field>
@@ -248,7 +257,7 @@ function onSubmit(values: any) {
           :error="fieldProps.errorMessage"
           field-label="Pasirinkimas"
           :field-wrapper-props="{
-            class: 'form-control',
+            class: 'form-control'
           }"
           class="pa-2"
           name="radioPasirinkimas"
@@ -257,7 +266,7 @@ function onSubmit(values: any) {
             { value: 'p2', label: 'Pasirinkimas #2' },
             { value: 'p3', label: 'Pasirinkimas #3' },
             { value: 'p4', label: 'Pasirinkimas #4' },
-            { value: 'p5', label: 'Labai ilgas pasirinkimas #5' },
+            { value: 'p5', label: 'Labai ilgas pasirinkimas #5' }
           ]"
         />
       </Field>
@@ -267,7 +276,7 @@ function onSubmit(values: any) {
           v-bind="fieldProps.field"
           :error="fieldProps.errorMessage"
           :field-wrapper-props="{
-            class: 'form-control',
+            class: 'form-control'
           }"
           field-label="Pasirinkimas"
           name="radioButtonsPasirinkimas"
@@ -276,7 +285,7 @@ function onSubmit(values: any) {
             { value: 'p2', label: 'Pasirinkimas #2' },
             { value: 'p3', label: 'Pasirinkimas #3' },
             { value: 'p4', label: 'Pasirinkimas #4' },
-            { value: 'p5', label: 'Labai ilgas pasirinkimas #5' },
+            { value: 'p5', label: 'Labai ilgas pasirinkimas #5' }
           ]"
         />
       </Field>

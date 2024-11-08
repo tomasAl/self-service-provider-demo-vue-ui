@@ -35,11 +35,13 @@
     ]
   },
   "include": [
+    "lib/**/*.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/@types/**/*",
-    "src/main.js"
+    "src/main.js",
+    "lib/single-spa-vue.cjs",
   ],
   "exclude": [
     "node_modules",

@@ -1,11 +1,9 @@
-import { h, createApp } from 'vue';
-import singleSpaVue from 'single-spa-vue';
-import { registerPlugins } from '@/plugins';
+import { h, createApp } from 'vue'
+// import 'vuetify/styles'
+import singleSpaVue from 'single-spa-vue'
+import registerPlugins from '@/plugins'
 
-import {} from '@registrucentras/rc-ses-vue-components'
-
-import App from '@/App.vue';
-
+import App from '@/App.vue'
 
 /*
  * @MICROFRONTEND
@@ -20,19 +18,19 @@ const vueLifecycles = singleSpaVue({
   createApp,
   appOptions: {
     render() {
-      return h(App, {});
-    },
+      return h(App, {})
+    }
   },
   handleInstance(app) {
     registerPlugins(app)
-  },
-});
+  }
+})
 
 /*
  * @MICROFRONTEND
  *
  * single-spa pateikiami lifecycle hook'ai.
  */
-export const bootstrap = vueLifecycles.bootstrap;
-export const mount = vueLifecycles.mount;
-export const unmount = vueLifecycles.unmount;
+export const { bootstrap } = vueLifecycles
+export const { mount } = vueLifecycles
+export const { unmount } = vueLifecycles

@@ -15,21 +15,15 @@ const [modelPadalinys, modelPadalinysProps] = defineField('padalinys')
 const [modelSkaicius, modelSkaiciusProps] = defineField('skaicius')
 
 const messages = [
-  'Informacija apie <a href="https://www.registrucentras.lt/" target="_blank">RC Padalinius</a>',
+  'Informacija apie <a href="https://www.registrucentras.lt/" target="_blank">RC Padalinius</a>'
 ]
 </script>
 
 <template>
-  <RcSesAlert
-    variant="light"
-    type="warning"
-    class="form-control"
-    title="Warning"
-    closable
-  >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  <RcSesAlert variant="light" type="warning" class="form-control" title="Warning" closable>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat.
 
     <a href="https://www.registrucentras.lt/" target="_blank" rel="noopener noreferrer">
       Daugiau informacijos
@@ -55,7 +49,7 @@ const messages = [
       { label: 'El. paštu', value: 'option1' },
       { label: 'Padalinye', value: 'option2' },
       { label: 'Paštu Lietuvoje', value: 'option3' },
-      { label: 'Paštu užsienyje', value: 'option4' },
+      { label: 'Paštu užsienyje', value: 'option4' }
     ]"
   ></RcSesRadioButtonsField>
 
@@ -73,20 +67,19 @@ const messages = [
       {
         title: 'Padalinys 1',
         value: 'p1',
-        subtitle:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       },
       { title: 'Padalinys 2', value: 'p2' },
       { title: 'Padalinys 3', value: 'p3' },
       {
         title: 'Padalinys 4',
         value: 'p4',
-        subtitle:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      },
+        subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      }
     ]"
   >
     <template #message="{ message }">
+      // eslint-disable-next-line vue/no-v-html
       <div v-html="message"></div>
     </template>
   </RcSesSelectField>

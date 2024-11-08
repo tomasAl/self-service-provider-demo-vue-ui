@@ -1,38 +1,38 @@
 <script setup lang="ts">
-  import { RcSesHeader, RcSesFormStepper } from '@registrucentras/rc-ses-vue-components';
+import { RcSesHeader, RcSesFormStepper } from '@registrucentras/rc-ses-vue-components'
 
-  import FormActions from '../components/FormActions.vue';
-  import FormActionsFooter from '../components/FormActionsFooter.vue';
-  import UserDetailsSection from '../components/UserDetailsSection.vue';
-  import ServiceDeliveryForm from '../components/ServiceDeliveryForm.vue';
-  import ServiceForm from '../components/ServiceForm.vue';
+import FormActions from '../components/FormActions.vue'
+import FormActionsFooter from '../components/FormActionsFooter.vue'
+import UserDetailsSection from '../components/UserDetailsSection.vue'
+import ServiceDeliveryForm from '../components/ServiceDeliveryForm.vue'
+import ServiceForm from '../components/ServiceForm.vue'
 
-  const steps = [
-    {
-      id: 'step1',
-      title: 'Vartotojo duomenys',
-      completed: true,
-      active: false,
-      expanded: false,
-      component: UserDetailsSection,
-    },
-    {
-      id: 'step2',
-      title: 'Paslaugos užsakymas',
-      completed: false,
-      active: true,
-      expanded: true,
-      component: ServiceForm,
-    },
-    {
-      id: 'step3',
-      title: 'Išdavimas',
-      completed: false,
-      active: false,
-      expanded: false,
-      component: ServiceDeliveryForm,
-    },
-  ];
+const steps = [
+  {
+    id: 'step1',
+    title: 'Vartotojo duomenys',
+    completed: true,
+    active: false,
+    expanded: false,
+    component: UserDetailsSection
+  },
+  {
+    id: 'step2',
+    title: 'Paslaugos užsakymas',
+    completed: false,
+    active: true,
+    expanded: true,
+    component: ServiceForm
+  },
+  {
+    id: 'step3',
+    title: 'Išdavimas',
+    completed: false,
+    active: false,
+    expanded: false,
+    component: ServiceDeliveryForm
+  }
+]
 </script>
 
 <template>
@@ -40,18 +40,18 @@
     :breadcrumbs="[
       {
         title: 'Pradžia',
-        href: '/',
+        href: '/'
       },
       {
-        title: 'Paslaugos užsakymas',
-      },
+        title: 'Paslaugos užsakymas'
+      }
     ]"
     title="Nekilnojamojo turto registro išrašas pagal nurodytą turto adresą"
     description="Šiame puslapyje Jūs galite užsisakyti Nekilnojamojo turto registro išrašus,
         pažymas bei kitus dokumentus. Užsakytą NTR išrašą, pažymą ar kitą dokumentą
         galėsite gauti elektroniniu būdu arba atsiimti pasirinktame VĮ Registrų centro
         padalinyje."
-    >
+  >
   </RcSesHeader>
 
   <RcSesFormStepper :items="steps">

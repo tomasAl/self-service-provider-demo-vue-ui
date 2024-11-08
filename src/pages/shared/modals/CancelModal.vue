@@ -2,15 +2,13 @@
   <v-dialog v-model="isOpen" max-width="400px">
     <v-card>
       <v-card-text class="text-center pa-6">
-        <div
-          class="rounded-circle my-5 pa-2 bg-error-50 w-25 h-25 d-inline-flex justify-center"
-        >
+        <div class="rounded-circle my-5 pa-2 bg-error-50 w-25 h-25 d-inline-flex justify-center">
           icon
         </div>
         <h2 class="text-h4 font-weight-bold mb-2">Ar tikrai norite baigti darbą?</h2>
         <p class="text-body">
-          Vidutinės rinkos vertės nekilnojamojo turto mokesčiams ir kitoms reikmėms
-          nustatymas, perskaičiavimas (masinio vertinimo būdu), įrašymas ar pateikimas
+          Vidutinės rinkos vertės nekilnojamojo turto mokesčiams ir kitoms reikmėms nustatymas,
+          perskaičiavimas (masinio vertinimo būdu), įrašymas ar pateikimas
         </p>
       </v-card-text>
       <v-card-actions class="justify-center pa-4 mb-4">

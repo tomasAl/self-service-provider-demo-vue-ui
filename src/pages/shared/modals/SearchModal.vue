@@ -63,9 +63,7 @@
             </Field>
 
             <div class="text-right">
-              <RcSesButton type="submit" color="primary" class="mr-2"
-                >Ieškoti</RcSesButton
-              >
+              <RcSesButton type="submit" color="primary" class="mr-2">Ieškoti</RcSesButton>
               <RcSesButton color="grey" variant="outlined" @click="handleOnReset">
                 Išvalyti
               </RcSesButton>
@@ -105,9 +103,7 @@
         >
           Pridėti
         </RcSesButton>
-        <RcSesButton color="error" variant="outlined" @click="onClose">
-          Atšaukti
-        </RcSesButton>
+        <RcSesButton color="error" variant="outlined" @click="onClose"> Atšaukti </RcSesButton>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -146,7 +142,7 @@ const emit = defineEmits(['update:modelValue'])
 // Dialog visibility
 const dialog = computed({
   get: () => props.modelValue,
-  set: (value) => emit('update:modelValue', value),
+  set: (value) => emit('update:modelValue', value)
 })
 
 // Form Schema using yup
@@ -155,12 +151,12 @@ const FormSchema = yup.object({
   street: yup.string().required('Gatvė yra privaloma'),
   addressNo: yup.string().required('Pastato nr. yra privalomas'),
   housingNo: yup.string().required('Korpuso nr. yra privalomas'),
-  aptNo: yup.string().required('Patalpos nr. yra privalomas'),
+  aptNo: yup.string().required('Patalpos nr. yra privalomas')
 })
 
 // Initialize form
 const { resetForm } = useForm<FormModel>({
-  validationSchema: FormSchema,
+  validationSchema: FormSchema
 })
 
 const results = ref<Result[]>([])
@@ -171,8 +167,8 @@ function handleFormSubmit() {
       regNo: '44/446848',
       type: 'Mišrus pastatas',
       uniqueIdentifier: '1099-2018-8012',
-      address: 'Vilnius, Vydūno g. 17',
-    },
+      address: 'Vilnius, Vydūno g. 17'
+    }
   ]
 }
 
