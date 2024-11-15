@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { inject } from 'vue'
-import { RcSesButton, UseFormType } from '@registrucentras/rc-ses-vue-components'
+import { ArrowRightIcon, RcSesButton, UseFormType } from '@registrucentras/rc-ses-vue-components'
 
 const formController = inject<UseFormType>('formController')
 

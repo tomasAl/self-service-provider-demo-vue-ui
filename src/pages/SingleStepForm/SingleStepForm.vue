@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { RcSesFormContainer, useAccordionController } from '@registrucentras/rc-ses-vue-components'
+import FormActionsAfter from '@/pages/shared/FormActionsAfter.vue'
+import FormActions from '@/pages/shared/FormActions.vue'
 import UzsakymasForm from './UzsakymasForm.vue'
 
 const accordionController = useAccordionController({

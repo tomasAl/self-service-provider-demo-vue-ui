@@ -3,6 +3,8 @@ import { toTypedSchema } from '@vee-validate/yup'
 import { useForm } from 'vee-validate'
 import * as yup from 'yup'
 
+import { getToken } from '@rc-ses/self-service-portal-ui-root'
+
 import {
   RcSesAccordion,
   RcSesFormContainer,
@@ -80,7 +82,9 @@ const formController = useForm({
       </template>
 
       <template #default>
-        <RcSesAccordion id="basicForm" />
+        <RcSesAccordion id="basicForm">
+          <RcSesTextAreaField field-label="JWT" :rows="8" :value="getToken()" />
+        </RcSesAccordion>
 
         <RcSesAccordion id="issueForm">
           <IsdavimasForm />
