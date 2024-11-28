@@ -16,7 +16,7 @@ import {
   RcSesTextField,
   RcSesTimePickerField
 } from '@registrucentras/rc-ses-vue-components'
-import SearchModal from '../shared/modals/SearchModal.vue'
+import SearchModal from '@/components/modals/SearchModal.vue'
 
 configure({
   validateOnBlur: true,

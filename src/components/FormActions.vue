@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { inject } from 'vue'
 /*
  * @MICROFRONTEND
  *
@@ -6,10 +7,21 @@
  * src/@types. Vėliau vietoje tokio formato jie bus pateikiami
  * kaip npm biblioteka.
  */
-import { addToCart } from '@rc-ses/self-service-portal-ui'
-import { redirectToLanding } from '@rc-ses/self-service-portal-ui-root'
+import { redirectToSelfServiceDashboard } from '@rc-ses/mfe-host'
+import { ArrowRightIcon, RcSesButton, UseFormType } from '@registrucentras/rc-ses-vue-components'
 
-import { ArrowRightIcon, RcSesButton } from '@registrucentras/rc-ses-vue-components'
+const formController = inject<UseFormType>('formController')
+
+const submit = () => {
+  if (formController) {
+    formController.submitForm()
+
+    if (formController.meta.value.valid) {
+      // eslint-disable-next-line no-console
+      console.debug('Form is valid', formController.values)
+    }
+  }
+}
 </script>
 
 <template>
@@ -18,15 +30,11 @@ import { ArrowRightIcon, RcSesButton } from '@registrucentras/rc-ses-vue-compone
     color="primary-700"
     prepend-icon="$prev"
     class="font-weight-regular"
-    @click="() => redirectToLanding()"
+    @click="() => redirectToSelfServiceDashboard()"
     >Baigti pildyti vėliau</RcSesButton
   >
   <div class="flex-grow-1" />
-  <RcSesButton
-    size="large"
-    class="text-body-2 font-weight-strong"
-    @click="() => addToCart('Vue paslauga #1')"
-  >
+  <RcSesButton size="large" class="text-body-2 font-weight-strong" @click="submit">
     Pridėti į krepšelį
     <template #append>
       <ArrowRightIcon color="grey-900" />

@@ -6,14 +6,10 @@
  * src/@types. Vėliau vietoje tokio formato jie bus pateikiami
  * kaip npm biblioteka.
  */
-import { redirectToLanding } from '@rc-ses/self-service-portal-ui-root'
-
+import { redirectToLanding } from '@rc-ses/mfe-host'
 import { RcSesButton } from '@registrucentras/rc-ses-vue-components'
 </script>
 
-<!-- @MICROFRONTEND-->
-<!-- `redirectToLanding` metodo kvietimas, kurį eksportuoja-->
-<!-- single-spa modulis @rc-ses/self-service-portal-ui-root-->
 <template>
   <div class="d-flex pt-4 justify-center">
     <RcSesButton
@@ -21,7 +17,8 @@ import { RcSesButton } from '@registrucentras/rc-ses-vue-components'
       color="grey-600"
       class="text-decoration-underline"
       @click="() => redirectToLanding()"
-      >Atšaukti pildymą ir ištrinti formos duomenis</RcSesButton
     >
+      Atšaukti pildymą ir ištrinti formos duomenis
+    </RcSesButton>
   </div>
 </template>

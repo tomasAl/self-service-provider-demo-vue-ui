@@ -3,15 +3,15 @@ import { toTypedSchema } from '@vee-validate/yup'
 import { useForm } from 'vee-validate'
 import * as yup from 'yup'
 
-import { getToken } from '@rc-ses/self-service-portal-ui-root'
+import { getToken } from '@rc-ses/mfe-host'
 
 import {
   RcSesAccordion,
   RcSesFormContainer,
   useAccordionController
 } from '@registrucentras/rc-ses-vue-components'
-import FormActionsAfter from '@/pages/shared/FormActionsAfter.vue'
-import FormActions from '@/pages/shared/FormActions.vue'
+import FormActionsAfter from '@/components/FormActionsAfter.vue'
+import FormActions from '@/components/FormActions.vue'
 import PapildomosPaslaugosForm from '@/pages/MultiStepForm/components/PapildomosPaslaugosForm.vue'
 import PaslaugosUzsakymasForm from '@/pages/MultiStepForm/components/PaslaugosUzsakymasForm.vue'
 import TerminaiForm from '@/pages/MultiStepForm/components/TerminaiForm.vue'

@@ -37,7 +37,7 @@ module.exports = {
   filenameHashing: false,
   configureWebpack: {
     externals: [
-      /^@rc-ses\/self-service-portal-.+/,
+      /^@rc-ses\/mfe-.+/,
     ],
     plugins: [
       new VueLoaderPlugin(),
