@@ -12,14 +12,15 @@
     "rc-ses-components:install": "npm run rc-ses-components:purge && npm i --install-links"
   },
   "dependencies": {
-    "@registrucentras/rc-ses-vue-components": "github:registrucentras/rc-ses-vue-components#v0.0.20",
+    "@registrucentras/rc-ses-vue-components": "github:registrucentras/rc-ses-vue-components#v0.0.30",
     "@vee-validate/rules": "4.13.2",
     "@vee-validate/yup": "4.13.2",
     "core-js": "3.37.1",
+    "i18next": "24.2.3",
+    "i18next-vue": "5.2.0",
     "single-spa-vue": "^3.0.0",
     "vee-validate": "^4.14.6",
-    "vue": "3.4.27",
-    "vue-i18n": "9.13.1",
+    "vue": "3.4.38",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "4.3.2",
     "yup": "^1.4.0"
